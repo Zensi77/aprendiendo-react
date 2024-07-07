@@ -1,8 +1,41 @@
-# React + Vite
+# Twitter Follow Card
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación simple de React que simula una tarjeta de seguimiento de Twitter. Los usuarios pueden ver la información de perfil y cambiar el estado de seguimiento de otros usuarios.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Visualiza la información del usuario incluyendo el nombre y el nombre de usuario.
+- Muestra el avatar del usuario utilizando el servicio de [unavatar.io](https://unavatar.io/).
+- Permite cambiar el estado de seguimiento de un usuario (Seguir/Siguiendo).
+
+## Requisitos
+
+- Node.js (versión 14 o superior)
+- npm (versión 6 o superior)
+
+## Instalación
+
+1. Clona el repositorio:
+
+    ```bash
+    git clone https://github.com/tu-usuario/twitter-follow-card.git
+    ```
+
+2. Navega al directorio del proyecto:
+
+    ```bash
+    cd twitter-follow-card
+    ```
+
+3. Instala las dependencias:
+
+    ```bash
+    npm install
+    ```
+
+## Uso
+
+Para ejecutar la aplicación en modo desarrollo, utiliza:
+
+```bash
+npm start

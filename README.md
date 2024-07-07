@@ -1,41 +1,35 @@
-# Twitter Follow Card
+# Curso de React con @midudev
 
-Este proyecto es una aplicación simple de React que simula una tarjeta de seguimiento de Twitter. Los usuarios pueden ver la información de perfil y cambiar el estado de seguimiento de otros usuarios.
+Este proyecto forma parte del curso de React impartido por @midudev. Aprenderemos a usar React con JavaScript y TypeScript, y utilizaremos diversas herramientas modernas para optimizar nuestro flujo de trabajo.
 
-## Características
+## Herramientas y Tecnologías
 
-- Visualiza la información del usuario incluyendo el nombre y el nombre de usuario.
-- Muestra el avatar del usuario utilizando el servicio de [unavatar.io](https://unavatar.io/).
-- Permite cambiar el estado de seguimiento de un usuario (Seguir/Siguiendo).
+- **Vite**: Un gestor de paquetes rápido y minimalista para construir aplicaciones web.
+- **React**: Una biblioteca de JavaScript para construir interfaces de usuario.
+- **TypeScript**: Un superset de JavaScript que añade tipos estáticos.
+- **SWC (Speedy Web Compiler)**: Un compilador extremadamente rápido de JavaScript y TypeScript, escrito en Rust, que sirve como alternativa eficiente a Babel.
 
-## Requisitos
+## Creación del Proyecto
 
-- Node.js (versión 14 o superior)
-- npm (versión 6 o superior)
+Para iniciar un nuevo proyecto de React utilizando Vite, sigue estos pasos:
 
-## Instalación
+1. **Crear el Proyecto**:
 
-1. Clona el repositorio:
+   Utiliza el siguiente comando para crear un nuevo proyecto con la última versión de Vite:
 
-    ```bash
-    git clone https://github.com/tu-usuario/twitter-follow-card.git
-    ```
+   ```bash
+   npm create vite@latest
 
-2. Navega al directorio del proyecto:
+2. **Instalar dependencias**
 
-    ```bash
-    cd twitter-follow-card
-    ```
-
-3. Instala las dependencias:
+Una vez creado el proyecto, navega al directorio del proyecto y ejecuta el siguiente comando para instalar todas las dependencias necesarias:
 
     ```bash
     npm install
     ```
 
-## Uso
-
-Para ejecutar la aplicación en modo desarrollo, utiliza:
-
-```bash
-npm start
+3. **Ejecutar la Aplicación**
+Para correr la aplicación en modo desarrollo, usa el siguiente comando:
+    ```bash
+    npm run dev
+    ```
