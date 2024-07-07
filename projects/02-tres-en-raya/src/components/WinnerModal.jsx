@@ -2,7 +2,7 @@ import { Square } from "./square";
 export function WinnerModal({ winner, resetGame }) {
     if (winner === null) return null;
     
-    const winnerText = winner ? `El ganador es ${winner}` : 'Empate';
+    const winnerText = winner ? `El ganador es` : 'Empate';
 return (
           <section className="winner">
         <div className="text">

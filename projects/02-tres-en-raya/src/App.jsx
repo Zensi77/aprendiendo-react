@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import confetti from 'canvas-confetti' // Importamos la librería de confetti npm install canvas-confetti
 import { Square } from './components/square'
 import { TURNS } from './components/constants'
 import { checkWinner, checkEndGame } from './logic/board'
 import { WinnerModal } from './components/WinnerModal'
+import { resetGameStorage, saveGameToStorage } from './logic/storage'
 
 function App() {
   const [board, setBoard] = useState(() => {
@@ -24,6 +25,8 @@ function App() {
     setBoard(Array(9).fill(null)); // Reiniciamos el tablero
     setTurn(TURNS.X); // Reiniciamos el turno
     setWinner(null); // Reiniciamos el ganador
+
+    resetGameStorage(); // Limpiamos el localStorage
   }
 
   
@@ -43,10 +46,6 @@ function App() {
     newBoard[index] = turn; // Actualizamos la celda del tablero con el valor del turno actual
     setBoard(newBoard); // Actualizamos el tablero
 
-    // Guardamos el ganador en una variable
-    window.localStorage.setItem('board', JSON.stringify(newBoard)); // Guardamos el tablero en el localStorage
-    window.localStorage.setItem('turn', newTurn); // Guardamos el turno en el localStorage
-
     const winner = checkWinner(newBoard);
     if (winner) {
       confetti(); // Lanzamos los confettis
@@ -55,6 +54,21 @@ function App() {
       setWinner(false); // false
     }
   }
+
+// Este hook se ejecuta cuando el componente se monta y se actualiza el estado de winner
+  useEffect(() => {
+    saveGameToStorage({
+      board: board,
+      turn: turn
+    });
+  }, [board, turn]);
+
+  useEffect(() => {
+    if (winner !== null) {
+      resetGameStorage();
+    }
+  }, [winner]);
+
 
   return (
     <main className="board">
