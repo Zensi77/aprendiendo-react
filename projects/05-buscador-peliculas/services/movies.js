@@ -1,4 +1,4 @@
-const API_KEY = 4742806;
+import { API_KEY } from '../.env';
 
 export const searchMovies = async ({ search }) => {
     if(search === '') {

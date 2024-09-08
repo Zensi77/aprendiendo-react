@@ -65,7 +65,7 @@ function App() {
   const handleChange = (event) => {
     const newSearch = event.target.value; // Obtenemos el valor del input
     updateSearch(newSearch); // Actualizamos el estado de search
-    //getMovies({ search: newSearch }); // Llamamos a la función getMovies con el valor de newSearch
+    // getMovies({ search: newSearch }); // Llamamos a la función getMovies con el valor de newSearch
     // al hacer esto, cada vez que escribimos en el input, se llama a la api, lo cual no es eficiente, asi que se soluciona con un debounce
     // debounce es una técnica que nos permite retrasar la ejecución de una función hasta que haya pasado un tiempo determinado
 
@@ -110,4 +110,3 @@ function App() {
 
 export default App
 
-// min 1:34:00
